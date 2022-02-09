@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Drums</title>
+  </head>
+  <body>
+    <section class="background">
+      <div id="drum-machine">
+        <div class="pad-container">
+          <div class="drum-pad" id="Q">
+            Q<audio src="./sounds/boom.wav" class="clip" id="q" />
+          </div>
+          <div class="drum-pad" id="W">
+            W
+            <audio src="./sounds/clap.wav" class="clip" id="w"></audio>
+          </div>
+          <div class="drum-pad" id="E">
+            E
+            <audio src="./sounds/hihat.wav" class="clip" id="e"></audio>
+          </div>
+          <div class="drum-pad" id="A">
+            A
+            <audio src="./sounds/kick.wav" class="clip" id="a"></audio>
+          </div>
+          <div class="drum-pad" id="S">
+            S
+            <audio src="./sounds/openhat.wav" class="clip" id="s"></audio>
+          </div>
+          <div class="drum-pad" id="D">
+            D
+            <audio src="./sounds/ride.wav" class="clip" id="d"></audio>
+          </div>
+          <div class="drum-pad" id="Z">
+            Z
+            <audio src="./sounds/snare.wav" class="clip" id="z"></audio>
+          </div>
+          <div class="drum-pad" id="X">
+            X
+            <audio src="./sounds/tink.wav" class="clip" id="x"></audio>
+          </div>
+          <div class="drum-pad" id="C">
+            C
+            <audio src="./sounds/tom.wav" class="clip" id="c"></audio>
+          </div>
+        </div>
+        <div class="option-container">
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <div class="pad-name">Lorem ipsum</div>
+          <input type="range" name="volume" class="volume" />
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

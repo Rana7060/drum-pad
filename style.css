@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: inherit; */
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  color: black;
+  line-height: 1.9;
+  background-color: cadetblue;
+  /* filter: blur(7px); */
+  z-index: 0;
+}
+#drum-machine {
+  /* border: 2px solid black; */
+  box-shadow: 3px 9px 29px 0px rgba(115, 115, 115, 0.78);
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: auto;
+  width: 60em;
+  height: 40rem;
+  background-color: rgb(58, 97, 99);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  grid-gap: 15px;
+  color: aliceblue;
+  margin: 20px;
+}
+.drum-pad {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  text-align: center;
+  /* padding: 30% 0; */
+  box-shadow: 8px 6px 13px -5px rgba(0, 0, 0, 0.78);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px;
+  /* padding-top: auto;
+  padding-bottom: auto; */
+  cursor: pointer;
+}
+.drum-pad:hover {
+  border: 2px solid rgb(252, 255, 82);
+  background-color: rgb(252, 255, 82);
+  transform: scale(1.05);
+}
+.option-container {
+  margin: 20px;
+  display: grid;
+  /* align-content: space-around; */
+  /* justify-content: center; */
+  justify-items: center;
+  grid-gap: 20px;
+  padding: 30px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.pad-name {
+  background-color: white;
+  padding: 12px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
